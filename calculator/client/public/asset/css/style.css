@@ -1,0 +1,301 @@
+ 
+  body {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Container for the background video */
+  .video-container {
+    position: fixed; /* Keep video fixed as background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the video to the back */
+    overflow: hidden;
+  }
+  
+  /* Make the video cover the whole screen */
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+  }
+  .app-container {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure text is visible on the video background */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  @media (max-width: 400px) {
+    .calculator {
+      width: 100%;
+      padding: 10px;
+    }
+    .buttons {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .calculator {
+    background-color: #b3b3b3;
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .display {
+    background-color: #fffefe;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: right;
+    font-size: 1.5rem;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4caf50;
+  }
+  
+  .equals {
+    grid-column: span 2;
+    background-color: #ff5722;
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  
+  .display input {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    width: 100%;
+    text-align: right;
+    outline: none;
+  }
+  
+  .result {
+    font-size: 20px;
+    color: #26912a;
+    margin-top: 10px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    box-shadow: #000000;
+  }
+  
+  button {
+    background-color: #b12525;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #575757;
+  }
+  
+  button:active {
+    background-color: #9a9a9a;
+  }
+  
+  .equals {
+    background-color: #4caf50;
+    grid-column: span 2;
+  }
+  
+  .equals:hover {
+    background-color: #5aca5f;
+  }
+  
+  
+  .tool-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tool-buttons button:hover {
+    background-color: #4caf50;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+
+
+  .currency-converter {
+    background-color: #919191;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  .ans {
+    background-color: #919191;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .currency-converter h2 {
+    color: #030303;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .currency-converter input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #818181;
+    border-radius: 5px;
+  }
+  
+  .currency-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .currency-select select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(179, 178, 178);
+    width: 45%;
+  }
+  
+  button {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4caf50;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 400px;
+    color: #000000;
+  }
+  
+
+
+
+
+  .length-converter {
+    background-color: #7a7a7a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .length-converter h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .length-converter input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .unit-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .unit-select select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(167, 167, 167);
+    width: 45%;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4caf50;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  
+   
+  
